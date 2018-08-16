@@ -7,7 +7,10 @@ package uasurfer
 
 import "strings"
 
-//go:generate stringer -type=DeviceType,BrowserName,OSName,Platform -output=const_string.go
+//go:generate stringer -type=DeviceType -trimprefix=Device
+//go:generate stringer -type=BrowserName -trimprefix=Browser
+//go:generate stringer -type=OSName -trimprefix=OS
+//go:generate stringer -type=Platform -trimprefix=Platform
 
 // DeviceType (int) returns a constant.
 type DeviceType int
@@ -136,20 +139,20 @@ func (v Version) Less(c Version) bool {
 }
 
 type UserAgent struct {
-	Browser    Browser
-	OS         OS
-	DeviceType DeviceType
+	Browser    Browser    `json:"browser,omitempty`
+	OS         OS         `json:"os,omitempty`
+	DeviceType DeviceType `json:"device,omitempty`
 }
 
 type Browser struct {
-	Name    BrowserName
-	Version Version
+	Name    BrowserName `json:"name,omitempty`
+	Version Version     `json:"version,omitempty`
 }
 
 type OS struct {
-	Platform Platform
-	Name     OSName
-	Version  Version
+	Platform Platform `json:"platform,omitempty`
+	Name     OSName   `json:"name,omitempty`
+	Version  Version  `json:"version,omitempty`
 }
 
 // Reset resets the UserAgent to it's zero value
