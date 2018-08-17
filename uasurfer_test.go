@@ -379,6 +379,10 @@ var testUAVars = []struct {
 		UserAgent{
 			Browser{BrowserGoogleBot, Version{0, 0, 0}}, OS{PlatformBot, OSBot, Version{0, 0, 0}}, DeviceComputer}},
 
+	{"GoogleStackdriverMonitoring-UptimeChecks(https://cloud.google.com/monitoring)",
+		UserAgent{
+			Browser{BrowserGoogleBot, Version{0, 0, 0}}, OS{PlatformBot, OSBot, Version{0, 0, 0}}, DeviceComputer}},
+
 	{"LinkedInBot/1.0 (compatible; Mozilla/5.0; Jakarta Commons-HttpClient/3.1 +http://www.linkedin.com)",
 		UserAgent{
 			Browser{BrowserLinkedInBot, Version{0, 0, 0}}, OS{PlatformBot, OSBot, Version{0, 0, 0}}, DeviceComputer}},

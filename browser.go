@@ -109,6 +109,9 @@ notwebkit:
 	case strings.Contains(ua, "googlebot"):
 		u.Browser.Name = BrowserGoogleBot
 
+	case strings.Contains(ua, "googlestackdrivermonitoring"):
+		u.Browser.Name = BrowserGoogleBot
+
 	case strings.Contains(ua, "linkedinbot"):
 		u.Browser.Name = BrowserLinkedInBot
 
